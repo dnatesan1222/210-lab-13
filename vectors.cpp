@@ -16,15 +16,14 @@ int main() {
     ifstream fin1("data.csv");
 
     vector<string> arr;
-
-
+    int count = 0;
+    
     if (fin1.good( )) {
         string line;
         //output file header
         getline(fin1, line);
         cout << line << endl;
-
-        count = 0;
+        
         while (getline(fin1, line)) {
             arr[count] = line;
             count += 1;
