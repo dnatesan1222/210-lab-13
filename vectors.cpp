@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <numeric>    // for accumulate()
+#include <algorithm>  // for min_element, max_element
 using namespace std;
 
 
