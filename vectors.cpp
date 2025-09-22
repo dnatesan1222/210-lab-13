@@ -15,16 +15,17 @@ using namespace std;
 int main() {
     ifstream fin1("data.csv");
 
-    array<string,50> arr;
-    int count = 0;
+    vector<string> arr;
+
 
     if (fin1.good( )) {
         string line;
         //output file header
-        //getline(fin1, line);
+        getline(fin1, line);
         cout << line << endl;
 
-        while (getline(fin1, line) && count < arr.size()) {
+        count = 0;
+        while (getline(fin1, line)) {
             arr[count] = line;
             count += 1;
         }
@@ -33,15 +34,15 @@ int main() {
     else
        cout << "File not found.\n";
 
-    /* //output the file contents
+    //output the file contents
     for (int i = 0; i<count; i++) {
         cout << arr.at(i) << endl;
     }
-    */
+
 
     ifstream fin2("pop.txt");
 
-    array<int,50> pop;
+    vector<int> pop;
     int count1 = 0;
 
     if (fin2.good( )) {
